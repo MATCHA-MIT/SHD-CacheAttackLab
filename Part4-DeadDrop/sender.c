@@ -3,7 +3,7 @@
 // mman library to be used for hugepage allocations (e.g. mmap or posix_memalign only)
 #include <sys/mman.h>
 
-// [Bonus] TODO: define your own buffer size
+// [4] TODO: define your own buffer size
 #define BUFF_SIZE (1<<21)
 //#define BUFF_SIZE TODO
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv)
     *((char *)buf) = 1; // dummy write to trigger page allocation
 
 
-    // [Bonus] TODO:
+    // [4] TODO:
     // Put your covert channel setup code here
 
     printf("Please type a message.\n");
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
         char text_buf[128];
         fgets(text_buf, sizeof(text_buf), stdin);
 
-        // [Bonus] TODO:
+        // [4] TODO:
         // Put your covert channel code here
     
     }

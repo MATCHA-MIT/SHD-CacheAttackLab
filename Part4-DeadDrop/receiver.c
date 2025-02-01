@@ -5,19 +5,18 @@
 
 int main(int argc, char **argv)
 {
-    // [Bonus] TODO: Put your covert channel setup code here
+    // [4] TODO: Put your covert channel setup code here
 
     printf("Please press enter.\n");
 
-    char text_buf[2];
-    fgets(text_buf, sizeof(text_buf), stdin);
+    getchar();
 
     printf("Receiver now listening.\n");
 
     bool listening = true;
     while (listening) {
 
-        // [Bonus] TODO: Put your covert channel code here
+        // [4] TODO: Put your covert channel code here
 
     }
 

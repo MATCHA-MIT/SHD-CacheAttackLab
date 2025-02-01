@@ -14,12 +14,6 @@ $(UTILS): %.o: %.c %.h
 $(TARGETS): %:%.o util.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-run_victim-2:
-	taskset -c $(SENDER_CPU) ./victim-2
-
-run_victim-3:
-	taskset -c $(SENDER_CPU) ./victim-3
-
 run_victim-4:
 	taskset -c $(SENDER_CPU) ./victim-4
 
