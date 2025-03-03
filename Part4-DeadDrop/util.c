@@ -44,7 +44,7 @@ char *string_to_binary(char *s)
 
     // Each char is one byte (8 bits) and + 1 at the end for null terminator
     char *binary = malloc(len * 8 + 1);
-    binary[len] = '\0';
+    binary[0] = '\0';
 
     for (size_t i = 0; i < len; ++i)
     {
