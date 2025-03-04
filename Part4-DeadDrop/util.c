@@ -79,7 +79,8 @@ char *binary_to_string(char *data)
 
     for (int i = 0; i < msg_len; i++)
     {
-        char tmp[8];
+        char tmp[9];
+        tmp[8] = '\0';
         int k = 0;
 
         for (int j = i * 8; j < ((i + 1) * 8); j++)
