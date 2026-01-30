@@ -15,10 +15,10 @@ $(TARGETS): %:%.o util.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 run_victim:
-	taskset -c $(SENDER_CPU) ./victim
+	taskset -c $(SENDER_CPU) timeout --foreground $(TIMEOUT) ./victim
 
 run_attacker: attacker
-	taskset -c $(RECEIVER_CPU) ./attacker
+	taskset -c $(RECEIVER_CPU) timeout --foreground $(TIMEOUT) ./attacker
 
 .PHONY:	clean
 

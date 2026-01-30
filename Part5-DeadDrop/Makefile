@@ -15,10 +15,10 @@ $(TARGETS): %:%.o util.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 run_sender: sender 
-	taskset -c $(SENDER_CPU) ./sender
+	taskset -c $(SENDER_CPU) timeout --foreground $(TIMEOUT) ./sender
 
 run_receiver: receiver
-	taskset -c $(RECEIVER_CPU) ./receiver
+	taskset -c $(RECEIVER_CPU) timeout --foreground $(TIMEOUT) ./receiver
 
 .PHONY:	clean
 
